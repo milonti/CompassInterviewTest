@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\compassInterviewTest\\CompassInterviewTest\\CompassInterviewTest.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\compassInterviewTest\\CompassInterviewTest\\CompassInterviewTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\compassInterviewTest\\CompassInterviewTest\\CompassInterviewTest.csproj",
+        "projectName": "CompassInterviewTest",
+        "projectPath": "D:\\Projects\\compassInterviewTest\\CompassInterviewTest\\CompassInterviewTest.csproj",
+        "packagesPath": "C:\\Users\\Milonti\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\compassInterviewTest\\CompassInterviewTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "F:\\AppDataManual\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1-windows",
+          "dependencies": {
+            "OxyPlot.Core": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "OxyPlot.Wpf": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.22, 3.1.22]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

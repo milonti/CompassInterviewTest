@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Milonti\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Milonti\\.nuget\\packages"
+    ]
+  }
+}

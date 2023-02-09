@@ -1,0 +1,14 @@
+Read through these instructions thoroughly to ensure you understand them
+
+We will be sending you two seperate emails. The first includes a stripped down version of the test project as well as the assessment instructions. The second includes the actual test project with instructions as comments. The purpose of the first email is to allow you to read over these instructions thoroughly and make sure you are able to compile, run, and debug the stripped down test project. The timer only begins once the second email is sent.
+
+1. We will send you "CompassInterviewTest Package 1.zip" in the first email. Copy the internal project folder to your preferred local directory
+2. Open the project with your preferred IDE. If you choose, you may create a git repository on your personal GitHub account to commit and push your code periodically. We will only assess the last push made before the time limit is up.
+3. Confirm that the project will build and launch. Tell us when this has happened. We will then send you "CompassInterviewTest Package 2.zip" in the second email.
+4. Copy the newly sent CompassInterviewTest project folder from within the zipped directory to the same directory as the first and overwrite those files
+5. Follow the Todo comments as instructions to modify the project's code. It is best that you follow the instructions consecutively: A, B, C etc. However, it is recommended that if you get stuck on any one part, put it aside for a moment and move on to the next instruction. Instruction H is identical to instruction G so you can simply copy the code from instruction G. We assume that only integer values will be input into the text box WPF elements. Do not worry about enabling decimal value inputs. 
+6. Screenshots will be included that show how the finished software should function for various input values. Use them as a reference, though the screenshots will not fully match your results until all instructions have been successfully completed.
+7. You will be timed from when the 2nd email is sent to you. In it will be a time that we expect the project to be submitted by. You will have about 2 hours to work. Submit what you have before that time arrives. Use both github to push your changes (if you created a repository) and send the final code in a zipped directory by email.
+8. We would rather see incorrect/incomplete code than no code, so give it your best shot. The more information we have the better your chances for partial credit.
+9. Feel free to leave comments of your thought process if you feel unable to successfully complete an instruction. You will only be judged by the functionality of the software, not the prettiness or cleanliness of the code.
+10. Best of luck!
