@@ -82,6 +82,18 @@ namespace CompassInterviewTest
             //Todo     Also use PlotView.Model = newPlotModel() to clear the plot if validation fails
             //Todo     Assign "N/A" to the calculatedIntensityLabel if validation fails
             //Todo     Make sure to clear the error message if there is no error
+            string errMessage = "";
+            if (ValidateInputVariables(out errMessage))
+            {
+                errorMessageLabel.Content = errMessage;
+            }
+            else
+            {
+                errorMessageLabel.Content = errMessage;
+                PlotView.Model = new PlotModel();
+                calculatedIntensityLabel.Content = "N/A";
+                return;
+            }
 
             var newModel = new PlotModel()
             {
@@ -121,6 +133,19 @@ namespace CompassInterviewTest
             //Todo     Also use PlotView.Model = newPlotModel() to clear the plot if validation fails
             //Todo     Assign "N/A" to the calculatedIntensityLabel if validation fails
             //Todo     Make sure to clear the error message if there is no error
+
+            string errMessage = "";
+            if (ValidateInputVariables(out errMessage))
+            {
+                errorMessageLabel.Content = errMessage;
+            }
+            else
+            {
+                errorMessageLabel.Content = errMessage;
+                PlotView.Model = new PlotModel();
+                calculatedIntensityLabel.Content = "N/A";
+                return;
+            }
 
             var newModel = new PlotModel()
             {
