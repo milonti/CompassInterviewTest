@@ -6,6 +6,14 @@ namespace CompassInterviewTest
 {
     public class MainWindowViewModel
     {
+        public ObservableCollection<OpacityCalculatorConstants.MaterialType> AvailableMaterialTypes => new ObservableCollection<OpacityCalculatorConstants.MaterialType>(
+        new []{
+            OpacityCalculatorConstants.MaterialType.Air,
+            OpacityCalculatorConstants.MaterialType.Water,
+            OpacityCalculatorConstants.MaterialType.Carbon,
+            OpacityCalculatorConstants.MaterialType.Aluminum,
+        });
+        
         //Defining placeholder default value to avoid null value exceptions
         private OpacityCalculatorConstants.MaterialType _chosenMaterialType = OpacityCalculatorConstants.MaterialType.Air;
         public OpacityCalculatorConstants.MaterialType ChosenMaterialType { get => _chosenMaterialType; set => _chosenMaterialType = value;}
