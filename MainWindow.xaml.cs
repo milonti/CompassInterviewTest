@@ -51,6 +51,27 @@ namespace CompassInterviewTest
         //Todo (Make sure to convert the ChosenFrequency value to exahertz by multiplying it by 1.0E18)
         private bool ValidateInputVariables(out string errorMessage)
         {
+            // As a note, the way this is setup will only display one error at a time
+            if (_viewModel.ChosenDistance > OpacityCalculatorConstants.MaximumDistance
+            || _viewModel.ChosenDistance < OpacityCalculatorConstants.MinimumDistance)
+            {
+                errorMessage = String.format("Please choose a distance between {0} and {1}", OpacityCalculatorConstants.MinimumDistance, OpacityCalculatorConstants.MaximumDistance);
+                return false;
+            }
+            if (_viewModel.ChosenFrequency * OpacityCalculatorConstants.ChosenFrequencyToExahertz > OpacityCalculatorConstants.MaximumFrequency
+            || _viewModel.ChosenFrequency * OpacityCalculatorConstants.ChosenFrequencyToExahertz < OpacityCalculatorConstants.MinimumFrequency)
+            {
+                errorMessage = String.Format("Please choose a frequency between {0} and {1}",
+                OpacityCalculatorConstants.MinimumFrequency / OpacityCalculatorConstants.ChosenFrequencyToExahertz,
+                OpacityCalculatorConstants.MaximumFrequency / OpacityCalculatorConstants.ChosenFrequencyToExahertz);
+                return false;
+            }
+            if (_viewModel.ChosenIntensity > OpacityCalculatorConstants.MaximumIntensity
+            || _viewModel.ChosenIntensity < OpacityCalculatorConstants.MaximumIntensity)
+            {
+                errorMessage = String.format("Please choose an intensity between {0} and {1}", OpacityCalculatorConstants.MinimumIntensity, OpacityCalculatorConstants.MaximumIntensity);
+                return false;
+            }
             errorMessage = "";
             return true;
         }
