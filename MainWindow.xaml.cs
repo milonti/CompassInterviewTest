@@ -117,11 +117,10 @@ namespace CompassInterviewTest
 
             //Plot calculated intensity from the minimum frequency to the ChosenFrequency variable
             newModel.Series.Add(
-                //Convert Chosen Frequency to exahertz
-                new FunctionSeries(x => OpacityCalculatorConstants.OpacityDistanceFunction(_viewModel.ChosenMaterialType, _viewModel.ChosenIntensity, x * 1.0E18, _viewModel.ChosenDistance),
+                new FunctionSeries(x => OpacityCalculatorConstants.OpacityDistanceFunction(_viewModel.ChosenMaterialType, _viewModel.ChosenIntensity, x, _viewModel.ChosenDistance),
                 OpacityCalculatorConstants.MinimumFrequency,
-                _viewModel.ChosenFrequency,
-                (_viewModel.ChosenFrequency - OpacityCalculatorConstants.MinimumFrequency) / OpacityCalculatorConstants.FrequencyIncrement));
+                _viewModel.ChosenFrequency * OpacityCalculatorConstants.ChosenFrequencyToExahertz,
+                ((_viewModel.ChosenFrequency * OpacityCalculatorConstants.ChosenFrequencyToExahertz - OpacityCalculatorConstants.MinimumFrequency) / OpacityCalculatorConstants.FrequencyIncrement)));
 
             PlotView.Model = newModel;
 
