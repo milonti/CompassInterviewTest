@@ -62,7 +62,14 @@ namespace CompassInterviewTest
         //x1: Upper interval bound
         //fx0: Function output of lower interval bound
         //fx1: Function output of upper interval bound
-        private static readonly Func<double, double, double, double, double, double> LinearInterpolation = (x0, x1, fx0, fx1, x) => (fx1 - fx0) / 2;
+        private static double LinearInterpolation(double x0, double x1, double fx0, double fx1, double x)
+        {
+            if ((x1 - x0) == 0)
+            {
+                return (fx0 + fx1) / 2;
+            }
+            return fx0 + (x - x0) * (fx1 - fx0) / (x1 - x0);
+        }
 
         //Todo C. Redefine this function to do the following:
         //Todo     1. Calculate the electron volts value from the frequency
@@ -71,7 +78,7 @@ namespace CompassInterviewTest
         //Todo     4. Use LinearInterpolation Func to return an estimate of the LinearAttenuationCoefficient
         //Mass Attenuation Function
         //v:  Frequency of light
-        private static readonly Func<MaterialType, double, double> LinearAttenuationFunction(MaterialType materialType, double v)
+        private static double LinearAttenuationFunction(MaterialType materialType, double v)
         {
             double chosenVolts = FrequencyToElectronVolts(v);
             double bottomVolt = ElectronVoltsA;  //Defaulting to the lowest lower bound
@@ -83,9 +90,9 @@ namespace CompassInterviewTest
             //So I swapped their orders
             if (bottomVolt == ElectronVoltsA)
             {
-                return LinearInterpolation(LinearAttenuationCoefficientTable[materialType, ElectronVoltsB], LinearAttenuationCoefficientTable(materialType, ElectronVoltsA));
+                return LinearInterpolation(ElectronVoltsB, ElectronVoltsA, LinearAttenuationCoefficientTable[(materialType, ElectronVoltsB)], LinearAttenuationCoefficientTable[(materialType, ElectronVoltsA)], chosenVolts);
             }
-            else return LinearInterpolation(LinearAttenuationCoefficientTable[materialType, ElectronVoltsC], LinearAttenuationCoefficientTable(materialType, ElectronVoltsB));
+            else return LinearInterpolation(ElectronVoltsC, ElectronVoltsB, LinearAttenuationCoefficientTable[(materialType, ElectronVoltsC)], LinearAttenuationCoefficientTable[(materialType, ElectronVoltsB)], chosenVolts);
         }
 
         //Opacity Distance Function
