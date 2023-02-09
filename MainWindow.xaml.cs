@@ -67,7 +67,7 @@ namespace CompassInterviewTest
                 return false;
             }
             if (_viewModel.ChosenIntensity > OpacityCalculatorConstants.MaximumIntensity
-            || _viewModel.ChosenIntensity < OpacityCalculatorConstants.MaximumIntensity)
+            || _viewModel.ChosenIntensity < OpacityCalculatorConstants.MinimumIntensity)
             {
                 errorMessage = String.Format("Please choose an intensity between {0} and {1}", OpacityCalculatorConstants.MinimumIntensity, OpacityCalculatorConstants.MaximumIntensity);
                 return false;
