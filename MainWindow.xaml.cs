@@ -55,7 +55,7 @@ namespace CompassInterviewTest
             if (_viewModel.ChosenDistance > OpacityCalculatorConstants.MaximumDistance
             || _viewModel.ChosenDistance < OpacityCalculatorConstants.MinimumDistance)
             {
-                errorMessage = String.format("Please choose a distance between {0} and {1}", OpacityCalculatorConstants.MinimumDistance, OpacityCalculatorConstants.MaximumDistance);
+                errorMessage = String.Format("Please choose a distance between {0} and {1}", OpacityCalculatorConstants.MinimumDistance, OpacityCalculatorConstants.MaximumDistance);
                 return false;
             }
             if (_viewModel.ChosenFrequency * OpacityCalculatorConstants.ChosenFrequencyToExahertz > OpacityCalculatorConstants.MaximumFrequency
@@ -69,7 +69,7 @@ namespace CompassInterviewTest
             if (_viewModel.ChosenIntensity > OpacityCalculatorConstants.MaximumIntensity
             || _viewModel.ChosenIntensity < OpacityCalculatorConstants.MaximumIntensity)
             {
-                errorMessage = String.format("Please choose an intensity between {0} and {1}", OpacityCalculatorConstants.MinimumIntensity, OpacityCalculatorConstants.MaximumIntensity);
+                errorMessage = String.Format("Please choose an intensity between {0} and {1}", OpacityCalculatorConstants.MinimumIntensity, OpacityCalculatorConstants.MaximumIntensity);
                 return false;
             }
             errorMessage = "";
